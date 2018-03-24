@@ -1,0 +1,2 @@
+sudo perf record -b -e  br_inst_retired.near_taken ./find / -name test
+sudo perf script  --no-demangle --show-mmap-events -F ip,brstack > perf.txt
